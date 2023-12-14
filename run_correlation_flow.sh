@@ -20,7 +20,7 @@ for temp in 298 302 306 310 314; do
                 echo "Processing: $tpr_file $trr_file" >> $LOG_FILE
                 mpirun python3 $SCRIPT_PATH $tpr_file $trr_file &
                 let counter+=1
-                # If 8 processes are running, wait
+                # If 1 processes are running, wait
                 if [[ $counter -eq 1 ]]; then
                     wait
                     counter=0
